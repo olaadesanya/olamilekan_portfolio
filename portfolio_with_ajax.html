@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adesanya Adebusayo Olamilekan - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    .dark-mode {
+      background-color: #1a202c;
+      color: #edf2f7;
+    }
+    .light-mode {
+      background-color: #f0f9ff;
+      color: #1a202c;
+    }
+  </style>
+</head>
+<body id="body" class="light-mode transition-all duration-300">
+  <div class="sticky top-4 right-4 z-50 flex justify-end px-6">
+    <label class="inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="modeToggle" class="sr-only" onchange="toggleMode()">
+      <div class="relative w-14 h-8 bg-gray-300 rounded-full dark:bg-gray-700 transition">
+        <div class="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ease-in-out" id="toggleKnob"></div>
+      </div>
+    </label>
+  </div>
+
+  <header class="text-center py-10 border-b border-gray-300 dark:border-gray-600 animate-fadeIn bg-gradient-to-r from-indigo-500 to-teal-500 text-white">
+    <h1 class="text-4xl font-bold mb-2">Adesanya Adebusayo Olamilekan</h1>
+    <p class="text-lg">Lagos, Nigeria | +2349058911194 | <a href="mailto:olaadesanya19@gmail.com" class="hover:underline">olaadesanya19@gmail.com</a></p>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-8">
+      <ul class="flex flex-wrap justify-center gap-4 text-lg font-semibold">
+        <li><a href="#about" class="tab-link text-indigo-600 hover:text-teal-500 transition">About</a></li>
+        <li><a href="#education" class="tab-link text-indigo-600 hover:text-teal-500 transition">Education</a></li>
+        <li><a href="#experience" class="tab-link text-indigo-600 hover:text-teal-500 transition">Experience</a></li>
+        <li><a href="#contact" class="tab-link text-indigo-600 hover:text-teal-500 transition">Contact</a></li>
+        <li><a href="#references" class="tab-link text-indigo-600 hover:text-teal-500 transition">References</a></li>
+      </ul>
+    </div>
+
+    <section id="about" class="animate-slideUp mb-16">
+      <h2 class="text-3xl font-semibold mb-4 text-indigo-600">About Me</h2>
+      <p class="text-lg leading-relaxed">A result-driven young professional with a strong background in IT, data analysis, and project management. Skilled in analyzing complex data, solving technical challenges, and managing strategic projects. Passionate about leveraging IT skills, analytical skills, and problem-solving abilities to drive efficiency and growth in business.</p>
+    </section>
+
+    <section id="education" class="animate-slideUp mb-16">
+      <h2 class="text-3xl font-semibold mb-4 text-indigo-600">Education</h2>
+      <p class="text-lg"><strong>Lagos State University (LASU)</strong> – B.Sc. Computer Science<br>Graduated: February 2024</p>
+    </section>
+
+    <section id="experience" class="animate-slideUp mb-16">
+      <h2 class="text-3xl font-semibold mb-4 text-indigo-600">Work Experience</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-2xl font-medium">Asst. Project Manager – Powertrim Nigeria Limited</h3>
+          <p class="text-sm text-gray-600">Port-Harcourt, Nigeria | May 2024 – Present</p>
+          <ul class="list-disc list-inside ml-4 mt-2 text-lg">
+            <li>Collaborated with clients on project goals and ensured demands were met.</li>
+            <li>Coordinated staff logistics for international projects.</li>
+            <li>Maintained regular project updates with clients.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-medium">IT Support – Sammy Tech Solutions</h3>
+          <p class="text-sm text-gray-600">Lagos, Nigeria | Nov 2022 – Apr 2023</p>
+          <ul class="list-disc list-inside ml-4 mt-2 text-lg">
+            <li>Troubleshot hardware and network problems.</li>
+            <li>Maintained IT documentation and guides.</li>
+            <li>Provided technical support to minimize disruptions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="animate-slideUp mb-16">
+      <h2 class="text-3xl font-semibold mb-4 text-indigo-600">Contact Me</h2>
+      <form id="contact-form" action="send-email.php" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded-md bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded-md bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700" />
+        <textarea name="message" placeholder="Your Message" rows="4" required class="w-full p-3 border rounded-md bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700"></textarea>
+        <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">Send Message</button>
+      </form>
+    </section>
+
+    <section id="references" class="animate-slideUp">
+      <h2 class="text-3xl font-semibold mb-4 text-indigo-600">References</h2>
+      <p><strong>Mr. Adeyemi Olufemi Raymond</strong><br>
+        Head, Fund Distribution, Mango Asset Management<br>
+        Email: <a href="mailto:femi_raymond@yahoo.com" class="text-indigo-500 hover:underline">femi_raymond@yahoo.com</a> | Phone: 08096043491</p>
+
+      <p class="mt-4"><strong>Dr. Opeolu Ojo</strong><br>
+        Senior Lecturer, University of Wolverhampton<br>
+        Email: <a href="mailto:cecejyde@gmail.com" class="text-indigo-500 hover:underline">cecejyde@gmail.com</a> | Phone: +44 7576 232187</p>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 text-sm text-gray-600 dark:text-gray-400 animate-fadeIn">
+    &copy; 2025 Adesanya Adebusayo Olamilekan
+  </footer>
+
+  <script>
+    function toggleMode() {
+      const body = document.getElementById('body');
+      const knob = document.getElementById('toggleKnob');
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+      knob.classList.toggle('translate-x-6');
+    }
+
+    document.querySelectorAll('.animate-slideUp').forEach((el, i) => {
+      el.classList.add('opacity-0');
+      setTimeout(() => {
+        el.classList.remove('opacity-0');
+        el.classList.add('transition', 'duration-1000', 'ease-in-out', 'transform', 'translate-y-0');
+      }, 100 * i);
+    });
+
+    // AJAX form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+
+      fetch("send-email.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      })
+      .catch(error => {
+        alert("There was an error submitting your message.");
+      });
+    });
+  </script>
+</body>
+</html>
